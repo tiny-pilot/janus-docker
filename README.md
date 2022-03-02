@@ -1,5 +1,6 @@
 # janus-docker
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/tinypilotkvm/janus.svg?maxAge=43200)](https://hub.docker.com/r/tinypilotkvm/janus/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
 
 ## Overview
