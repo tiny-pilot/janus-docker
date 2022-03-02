@@ -1,6 +1,12 @@
+# janus-docker
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
+
 ## Overview
 
-This is a Docker image for the Janus WebRTC server. It builds Janus specifically for use with uStreamer on a Raspberry Pi OS system, so it's probably not useful for general purpose Janus work.
+This is a Docker image for the Janus WebRTC server.
+
+It builds Janus specifically for use with uStreamer on a Raspberry Pi OS system, so it's probably not useful for general purpose Janus work.
 
 ## Requirements
 
