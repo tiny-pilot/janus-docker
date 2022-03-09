@@ -25,7 +25,35 @@ Log out and log in again for the docker permissions to take effect.
 ## Building
 
 ```bash
+# Tag the docker image with the current date.
+TAG="$(date '+%Y-%m-%d')"
+# Build the docker image.
 pushd $(mktemp -d) && \
   git clone https://github.com/tiny-pilot/janus-docker.git . && \
-  docker build -t janus-ustreamer .
+  docker build -t "tinypilotkvm/janus:${TAG}" .
+```
+
+Alternatively, you can make use of the pre-built Docker image by running the following command:
+
+```bash
+docker pull tinypilotkvm/janus:2022-03-07
+```
+
+## Running
+
+```bash
+docker run \
+  --privileged \
+  --network host \
+  --volume /dev/shm:/dev/shm \
+  --name janus \
+  "tinypilotkvm/janus:${TAG}"
+```
+
+## Uploading
+
+If you are happy with the build, you can upload it to Docker Hub:
+
+```bash
+docker push "tinypilotkvm/janus:${TAG}"
 ```
