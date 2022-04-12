@@ -69,7 +69,7 @@ RUN ln -s /opt/janus/include/janus /usr/include/janus && \
 
 RUN git clone --depth=1 https://github.com/pikvm/ustreamer && \
     cd ustreamer && \
-    make WITH_OMX=1 WITH_JANUS=1 && \
+    make WITH_JANUS=1 && \
     mv /ustreamer/janus/libjanus_ustreamer.so /opt/janus/lib/janus/plugins/libjanus_ustreamer.so
 
 COPY janus.plugin.ustreamer.jcfg /opt/janus/lib/janus/configs/janus.plugin.ustreamer.jcfg
